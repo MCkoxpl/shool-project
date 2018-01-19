@@ -14,10 +14,11 @@ if(isset($_SESSION)){
 </head>
 
 <body>
-   <div id="main">
-     
+   <div  id="main" class="pin">
+     <div class="dpin">
+     </div>
      <h1>
-    Dashboard
+    Przepisy
   </h1>
     
   <form method="POST" enctype="multipart/form-data" action="login.php">
@@ -28,13 +29,11 @@ if(isset($_SESSION)){
     <label>Login </label><br><input type="text" name="log"><br>
     <label>Hasło </label><br><input type="password" name="pas"><br>
     <br>
-    <button type="submit">Zaloguj się</button>
+    <div class="bbar">
+    <a href="main.php" class="butt" onclick="document.forms[0].submit();return false;">Zaloguj się</a>
+    <a href="newaccont.php" class="butt">Nowe konto</a>
+        </div>
     <?php if(isset($_GET["er"])){echo "Złe dane logowania";}?>
-  </form>
-  <form action="newaccont.php">
-    <button type="submit">
-      Nowe konto
-    </button>
   </form>
      </div>
 </body>
